@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import BlogItem from "./BlogItem"
+import BlogItem from "./blogItem"
 
 const Blog = () => {
 
