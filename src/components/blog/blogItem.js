@@ -12,7 +12,7 @@ const BlogItem = ({ alt, image, slug, title}) => {
                     <img
                         src={gatsbyImage.images.fallback.src}
                         alt={alt}
-                        className="max-h-[400px]"
+                        className="max-h-[400px] rounded-lg"
                     />
                 )}
                 <h3 className="font-semibold text-black max-w-4/5 text-center mt-2 capitalize sm:text-base text-sm">{title}</h3>

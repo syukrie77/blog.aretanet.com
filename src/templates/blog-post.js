@@ -5,6 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function BlogPost({ data }) {
   const post = data.allWpPost.edges[0].node
+  const author = post.featuredImage.node.author.node.name
+  const date = new Date(post.date).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })
   
   return (
     <Layout>
@@ -14,10 +16,16 @@ export default function BlogPost({ data }) {
           <div>
           <GatsbyImage image={getImage(post.featuredImage.node.localFile)} 
           alt={post.title} 
-          className="mb-6 mt-8"
+          className="mb-6 mt-8 rounded-lg" 
           style={{ width: "100%", height: "auto" }} 
           />
           </div>
+        )}
+        {date && (
+          <p className="text-gray-600 font-semibold">Tanggal: {date}</p>
+        )}
+        {author && (
+          <p className="text-gray-600 mt-16 mb-8 font-semibold">Penulis: {author}</p>
         )}
         <div className="prose lg:text-lg xl:text-xl mt-8" dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
@@ -32,11 +40,17 @@ export const query = graphql`
         node {
           title
           content
+          date
           featuredImage {
             node {
               localFile {
                 childImageSharp {
                   gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                }
+              }
+              author {
+                node {
+                  name
                 }
               }
             }

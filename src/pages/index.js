@@ -4,12 +4,12 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import { graphql } from "gatsby"
 import Blog from "../components/blog"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Home = () => {
       return (
         <Layout>
-          <SEO/>
+          <Seo/>
           <Header/>
           <Blog/>
         </Layout>
