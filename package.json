@@ -6,16 +6,23 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^5.13.2",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-wordpress": "^7.9.0",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "autoprefixer": "^10.4.17",
+    "gatsby-plugin-postcss": "^6.13.1",
+    "postcss": "^8.4.35",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.4.1"
   },
   "keywords": [
     "gatsby"

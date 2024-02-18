@@ -1,50 +1,35 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+import React from "react"
+import {Link} from "gatsby"
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({children}) => {
+  const linkStyle = `
+  hover:opacity-70 
+  text-sm 
+  sm:text-lg
+  `
+  const logoStyle= `
+  text-white
+  font-rammetto
+  sm:text-base
+  text-sm
+  `
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div>
+      <nav className="flex sm:justify-between justify-around items-center bg-green-900 lg:px-20 sm:px-6 py-8 text-gray-100">
+        <h3 className={logoStyle}>AretanetBlog</h3>
+        <ul className="flex space-x-4">
+          <li className={linkStyle}><Link to="/">Home</Link></li>
+          <li className={linkStyle}><Link to="/contact">Contact</Link></li>
+          <li className={linkStyle}><Link to="/about">About</Link></li>
+        </ul>
+      </nav>
+
+      <main>{children}</main>
+      
+      <footer className="bg-green-900 text-gray-100 py-8 text-center mt-8">
+      <p>Copyright 2024 <span className={logoStyle}>AretanetBlog</span></p>
+      </footer>
+    </div>
   )
 }
 
