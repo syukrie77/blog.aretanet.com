@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog Aretanet`,
-    description: `An example to learn how to source data from WordPress.`,
-    author: `@gatsbyjs`,
+    title: `Aretanet Blog`,
+    description: `Aretanet Blog Berbagi Tip dan Trik Bisnis, IT dan Wirausaha.`,
+    author: `@syukrie77`,
   },
   plugins: [
     'gatsby-plugin-postcss',
