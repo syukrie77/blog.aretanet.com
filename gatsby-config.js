@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://info.aretanet.com`,
     title: `Aretanet Blog`,
     description: `Aretanet Blog Berbagi Tip dan Trik Bisnis, IT dan Wirausaha.`,
     author: `@syukrie77`,
@@ -41,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `AretanetBlog`,
+        name: `Aretanet Blog`,
         short_name: `aretanet`,
         start_url: `/`,
         background_color: `#663399`,
