@@ -15,7 +15,7 @@ const Layout = ({children}) => {
   `
   return (
     <div>
-      <nav className="flex sm:justify-between justify-around items-center bg-green-900 lg:px-20 sm:px-6 py-8 text-gray-100">
+      <nav className="flex sm:justify-between justify-around items-center bg-blue-900 lg:px-20 sm:px-6 py-8 text-gray-100">
         <h3 className={logoStyle}>AretanetBlog</h3>
         <ul className="flex space-x-4">
           <li className={linkStyle}><Link to="/">Home</Link></li>
@@ -26,7 +26,7 @@ const Layout = ({children}) => {
 
       <main>{children}</main>
       
-      <footer className="bg-green-900 text-gray-100 py-8 text-center mt-8">
+      <footer className="bg-blue-900 text-gray-100 py-8 text-center mt-8">
       <p>Copyright 2024 <span className={logoStyle}>AretanetBlog</span></p>
       </footer>
     </div>
